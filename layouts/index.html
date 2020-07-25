@@ -1,0 +1,30 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+<div class="container">
+    <div id="wrapper" class="row">
+        <div id="left-content" class="col-md-9">
+            {{ range first 5 (where (where .Site.Pages.ByDate.Reverse "Section" "post") ".Title" "!=" "Posts") }}
+            <div class="content">
+                <div class="post-header">
+                    <a href="{{ .RelPermalink }}"><h1>{{ .Title }}</h1></a>
+                    <div class="post-meta">
+                        <span class="publish-date"> {{ .PublishDate.Format "January 2, 2006" }} </span>
+                        <span class="word-count">
+                            {{ .WordCount }} words
+                        </span>
+                        <span class="reading-time">
+                            {{ .ReadingTime }} min read
+                        </span>
+                    </div>
+                </div>
+                <article class="post-content">
+                    <p> {{ .Summary }} </p>
+                    <a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+                </article>
+            </div>
+            {{ end }}
+        </div>
+        {{ partial "right-sidebar.html" . }}
+    </div>
+</div>
+{{ partial "footer.html" . }}

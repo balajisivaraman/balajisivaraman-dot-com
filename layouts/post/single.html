@@ -1,0 +1,50 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+<div class="container">
+    <div id="wrapper" class="row">
+        <div id="left-content" class="col-md-9">
+            <div class="content">
+              <div class="post-header">
+                    {{ range $value := .Params.categories }}
+                    <div class="post-categories">
+                        <a href="/categories/{{ $value | urlize }}"> {{ $value }} </a>
+                    </div>
+                    {{ end }}
+                    <h1>{{ .Title }}</h1>
+                    <div class="post-meta">
+                        <span class="publish-date"> {{ .PublishDate.Format "January 2, 2006" }} </span>
+                        <span class="word-count">
+                            {{ .WordCount }} words
+                        </span>
+                        <span class="reading-time">
+                            {{ .ReadingTime }} min read
+                        </span>
+                    </div>
+                </div>
+                <article class="post-content">
+                    {{ .Content }}
+                </article>
+                {{ if eq .Site.Params.enable_comments true }}
+                <div id="disqus_thread"></div>
+                <script>
+                 var disqus_config = function () {
+                     this.page.url = {{ .Permalink }};
+                     this.page.identifier = {{ .Params.slug }};
+                 };
+                 var disqusSrc = 'https://' + {{ .Site.Params.disqusShortname }} + '.disqus.com/embed.js';
+                 (function() {
+                     var d = document, s = d.createElement('script');
+                     s.src = disqusSrc;
+                     s.setAttribute('data-timestamp', +new Date());
+                     (d.head || d.body).appendChild(s);
+                 })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                {{ end }}
+            </div>
+        </div>
+        {{ partial "right-sidebar.html" . }}
+    </div>
+</div>
+<script id="dsq-count-scr" src="//http-blog-balajisivaraman-com.disqus.com/count.js" async></script>
+{{ partial "footer.html" . }}

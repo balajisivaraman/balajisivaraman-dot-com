@@ -1,0 +1,33 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+<div class="container">
+    <div id="wrapper" class="row">
+        <div id="left-content" class="col-md-9">
+            <div class="content">
+                <div class="post-header">
+                    <h2>{{ .Title }} </h2>
+                </div>
+                <article class="post-content">
+                    <div class="archives">
+                        {{ range .Site.Pages.GroupByDate "2006" }}
+                        {{ if gt (len (where .Pages "Type" "post")) 0 }}
+                        <h3>
+                            {{ .Key }}
+                        </h3>
+                        {{ range .Pages }}
+                        {{ if and (eq .Type "post") (ne .Title "Posts") }} <!-- Hack to filter Posts page -->
+                        <div class="publish-date"> {{ .PublishDate.Format "January 2, 2006" }} </div>
+                        <div class="post-title"> <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a> </div>
+                        <br />
+                        {{ end }}
+                        {{ end }}
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                </article>
+            </div>
+        </div>
+        {{ partial "right-sidebar.html" . }}
+    </div>
+</div>
+{{ partial "footer.html" . }}

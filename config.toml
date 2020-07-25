@@ -1,0 +1,21 @@
+baseURL = "https://www.bytesandwords.com/"
+languageCode = "en-us"
+title = "Bytes and Words"
+
+# Enable Chroma Syntax Highlighting
+pygmentsOptions = "linenos=true"
+pygmentsStyle = "dracula"
+pygmentsCodefencesGuessSyntax = true
+pygmentsCodeFences = true
+
+preserveTaxonomyNames = true
+
+[permalinks]
+post = "/:slug"
+
+[params]
+author = "Balaji Sivaraman"
+description = "A blog about programming, systems design and tech leadership."
+bio = "Hi, I'm Balaji Sivaraman, a lead technologist at ThoughtWorks. On these pages, you will find my thoughts on programming languages, software architecture, and technical leadership."
+disqusShortname = "https-www-bytesandwords-com"
+enable_comments = true

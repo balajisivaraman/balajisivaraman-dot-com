@@ -1,0 +1,15 @@
+<div id="right-content" class="col-md-3">
+    <div id="social-icons" style="text-align: left">
+        <h4>Follow Me</h4>
+        <div style="margin: 0.8em 0;"></div>
+        {{ partial "social-icons.html" . }}
+    </div>
+    <div id="categories">
+        <h4>Categories</h4>
+        <ul style="padding: 0; margin: 1em 0;">
+            {{ range $.Site.Taxonomies.categories.ByCount }}
+            <li class="post-categories"><a href="/categories/{{ .Term | urlize  }}">{{ .Term | title }}</a> ({{ .Count }})</li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
