@@ -1,0 +1,393 @@
+/* Basic Setup and Font Configuration */
+
+/* Colors */
+$white: #FFFFFF;
+$black: #000000;
+$header-footer-bg: #212121;
+$header-footer-fg: #7A7A7A;
+$link: #1565C0;
+$link-hover: #42A5F5;
+
+/* Fonts */
+$body-font: 'Open Sans', helvetica, sans-serif;
+$heading-font: 'Oswald', helvetica, sans-serif;
+$subtext-font: 'Work Sans', helvetica, sans-serif;
+
+html {
+    font-size: 1em;
+}
+
+body {
+    background-color: $white;
+    font-size: 1em;
+    font-family: $body-font;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #333;
+    margin: 0;
+}
+
+p {
+    margin-bottom: 1.4em;
+}
+
+h1, h2, h3, h4 {
+    margin: 0.8em 0 0.5em;
+    font-family: $heading-font;
+    font-weight: inherit;
+    line-height: 1.2;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3.157em;
+}
+
+h2 {
+    font-size: 2.369em;
+}
+
+h3 {
+    font-size: 1.777em;
+}
+
+h4 {
+    font-size: 1.333em;
+}
+
+small, .font_small {
+    font-size: 0.75em;
+}
+
+/* Links */
+a {
+    color: $link;
+    text-decoration: inherit;
+
+    &:visited {}
+
+    &:hover {
+        color: $link-hover;
+    }
+}
+
+/* Box Links */
+a.box {
+    width: fit-content;
+    width: -moz-fit-content;
+    background-color: $header-footer-bg;
+    color: $white;
+    display: block;
+
+    &:visited {}
+
+    &:hover {
+        text-decoration: none;
+        background-color: $link-hover;
+    }
+
+}
+
+/* Miscellaneous Classes */
+.category {
+    padding: 0.2em 0.4em;
+    margin: 0 0.2em 0.6em 0.3em;
+    font-size: 0.7em;
+    display: inline-block;
+}
+
+.social-icons {
+    font-size: 1.8em;
+
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+}
+
+.read-more {
+    padding: 0.2em 0.8em;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Page Wrapper */
+#wrapper {
+    padding: 1.5em 1em 2.5em;
+}
+
+.content {
+    background: $white;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+/* Page Header */
+header {
+    background: $header-footer-bg;
+    padding-top: 1px;
+    line-height: 0.6em;
+    font-size: 0.9em;
+
+    .hamburger {
+        display: none;
+    }
+
+    .page-header {
+        height: 4em;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .blog-title {
+            font-size: 2.4em;
+            font-family: $heading-font;
+
+            a {
+                color: $header-footer-fg;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        nav.navigation {
+            margin-left: auto;
+            display: block;
+
+            ul {
+                list-style: none;
+                text-align: center;
+                display: initial;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        font-family: $heading-font;
+                        font-size: 1.2em;
+                        padding: 8px 10px;
+                        color: $header-footer-fg;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .closebtn {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Responsive Menu */
+@media only screen and (max-width: 767px) {
+    header {
+        .hamburger {
+            display: inline-block;
+            margin-left: auto;
+            color: $header-footer-fg;
+            padding-top: 10px;
+
+            a.icon {
+                font-size: 2em;
+                color: $header-footer-fg;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .page-header {
+            nav.navigation {
+                /* Height & width depends on how you want to reveal the overlay (see JS below) */
+                height: 100%;
+                width: 0;
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                background-color: rgb(0,0,0); /* Black fallback color */
+                background-color: rgba(0,0,0,0.9); /* Black w/opacity */
+                overflow-x: hidden; /* Disable horizontal scroll */
+                transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+
+                ul {
+                    position: relative;
+                    top: 25%; /* 25% from the top */
+                    width: 100%; /* 100% width */
+                    text-align: center; /* Centered text/links */
+                    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+                    display: flex;
+                    align-content: center;
+                    flex-direction: column;
+                    padding: 0;
+
+                    li {
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        width: 100%;
+                        padding: 0.8em 0;
+                        border-bottom: 1px solid #818181;
+
+                        a {
+                            padding: 8px;
+                            text-decoration: none;
+                            font-size: 2em;
+                            color: #818181;
+                            display: block; /* Display block instead of inline */
+                            transition: 0.3s; /* Transition effects on hover (color) */
+                        }
+
+                        &:first-child {
+                            border-top: 0.5px solid #818181;
+                        }
+                    }
+                }
+
+                .closebtn {
+                    display: block;
+                    color: #818181;
+                    position: absolute;
+                    top: 20px;
+                    right: 15px;
+                    font-size: 2em;
+
+                    a:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Content Header */
+.post-header {
+    a:hover {
+        text-decoration: none;
+    }
+
+    h1 {
+        margin-bottom: 5px;
+        color: #000;
+    }
+
+    h2 {
+        margin-top: 0;
+        text-align: left;
+        border-bottom: 1px solid #BDBDBD;
+    }
+
+    .post-meta {
+        font-family: $subtext-font;
+        font-size: 1em;
+        color: $header-footer-fg;
+
+        .word-count::before, .reading-time::before {
+            content: "\B7";
+        }
+    }
+}
+
+/* Body */
+article {
+    line-height: 1.65em;
+}
+
+blockquote {
+    margin-left: 0;
+    padding-left: 30px;
+    border-left: 6px solid #9E9E9E;
+}
+
+.archives {
+    div {
+        display: inline-block
+    }
+
+    .publish-date {
+        padding-left: 1em;
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .archives {
+        .publish-date {
+            padding-left: 1em;
+            width: 100%;
+        }
+
+        .post-title {
+            padding-left: 1em;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .archives > .publish-date {
+        padding-left: 1em;
+        width: 30%;
+    }
+
+    .archives > .post-title {
+        padding-left: 1em;
+    }
+}
+
+/* Right Sidebar */
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+
+        padding: 2.5px 0 15px;
+    }
+
+    &-item {
+        padding: 15px;
+        font-size: 0.9em;
+        line-height: 1.5em;
+
+        &:not(:first-child) {
+            margin-top: 1.5em;
+            text-align: left;
+        }
+
+        h4 {
+            margin: 0 0 10px;
+            padding-bottom: 5px;
+            text-align: left;
+            border-bottom: 1px solid #BDBDBD;
+        }
+
+        ul {
+            padding-left: 2em;
+        }
+    }
+}
+
+/* Footer */
+footer {
+    padding-top: 15px;
+    height: 5em;
+    text-align: center;
+    background-color: $header-footer-bg;
+    color: $header-footer-fg;
+}

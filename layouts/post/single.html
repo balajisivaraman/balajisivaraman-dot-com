@@ -6,8 +6,8 @@
             <div class="content">
               <div class="post-header">
                     {{ range $value := .Params.categories }}
-                    <div class="post-categories">
-                        <a href="/categories/{{ $value | urlize }}"> {{ $value }} </a>
+                    <div>
+                        <a class="box category" href="/categories/{{ $value | urlize }}"> {{ $value }} </a>
                     </div>
                     {{ end }}
                     <h1>{{ .Title }}</h1>

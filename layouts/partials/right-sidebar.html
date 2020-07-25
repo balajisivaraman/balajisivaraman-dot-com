@@ -1,15 +1,18 @@
 <div id="right-content" class="col-md-3">
-    <div id="social-icons" style="text-align: left">
+  <div class="sidebar">
+    <div class="sticky">
+      <div class="sidebar-item" id="social-icons">
         <h4>Follow Me</h4>
-        <div style="margin: 0.8em 0;"></div>
         {{ partial "social-icons.html" . }}
-    </div>
-    <div id="categories">
+      </div>
+      <div class="sidebar-item" id="categories">
         <h4>Categories</h4>
         <ul style="padding: 0; margin: 1em 0;">
-            {{ range $.Site.Taxonomies.categories.ByCount }}
-            <li class="post-categories"><a href="/categories/{{ .Term | urlize  }}">{{ .Term | title }}</a> ({{ .Count }})</li>
-            {{ end }}
+          {{ range $.Site.Taxonomies.categories.ByCount }}
+          <li style="display: inline-block"><a class="box category" href="/categories/{{ .Term | urlize  }}">{{ .Term | title }} ({{ .Count }})</a></li>
+          {{ end }}
         </ul>
+      </div>
     </div>
+  </div>
 </div>
