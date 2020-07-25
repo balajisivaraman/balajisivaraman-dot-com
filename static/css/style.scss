@@ -1,12 +1,15 @@
 /* Basic Setup and Font Configuration */
+
+$white: #FFFFFF;
+
 html {
     font-size: 1em;
 }
 
 body {
-    background-color: #FFFFFF;
+    background-color: $white;
     font-size: 1em;
-    font-family: Lato, helvetica, sans-serif;
+    font-family: 'Open Sans', helvetica, sans-serif;
     font-weight: 400;
     line-height: 1.45;
     color: #333;
@@ -47,7 +50,7 @@ small, .font_small {font-size: 0.75em;}
 }
 
 .content {
-    background: #FFFFFF;
+    background: $white;
     padding: 0;
     margin-bottom: 20px;
 }
