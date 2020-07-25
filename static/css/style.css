@@ -281,6 +281,16 @@ nav.navigation .closebtn {
     display: block;
 }
 
+.read-more:visited {
+    text-decoration: none;
+    width: fit-content;
+    width: -moz-fit-content;
+    background-color: #212121;
+    color: #ffffff;
+    padding: 0.2em 0.8em;
+    display: block;
+}
+
 article {
     margin: auto 10px;
     font-family: 'Open Sans', helvetica, sans-serif;
