@@ -210,6 +210,7 @@ header {
         font-family: $subtext-font;
         font-size: 1em;
         color: $header-footer-fg;
+        margin-bottom: 1.4em;
 
         .word-count::before, .reading-time::before {
             content: "\B7";
