@@ -1,48 +1,38 @@
----
-date: 2017-08-20T21:38:52+08:00
-lastmod: 2017-08-28T21:41:52+08:00
-title: About
-type: page
----
+#+date: 2017-08-20T21:38:52+08:00
+#+lastmod: 2017-08-28T21:41:52+08:00
+#+title: About
+#+type: page
 
-My name is Balaji Sivaraman, and [I'm a
-programmer](https://github.com/balajisivaraman/). I work as an
+My name is Balaji Sivaraman, and [[https://github.com/balajisivaraman/][I'm a programmer]]. I work as an
 application developer for ThoughtWorks in Chennai. My day-to-day work
 mostly involves writing microservices using Java and Spring, with a
 little bit of Ruby on Rails thrown in for good measure. I mostly spend
-my free time nowadays learning [Rust Lang](https://www.rust-lang.org/)
-and contributing to various open source projects written in it.
+my free time nowadays learning [[https://www.rust-lang.org/][Rust Lang]] and contributing to various
+open source projects written in it.
 
-You can find me under the handle `balajisivaraman` on most websites.
+You can find me under the handle =balajisivaraman= on most websites.
 (Links to social media handles are available in the footer.)
 
-### Personal Stuff
+** Personal Stuff
 
 I consider myself a serious cinephile. I maintain a blog on my
-thoughts on films I've seen at [Balaji
-Thots](https://www.balajithots.com). Over there, you can also find my
-thoughts on other topics that interest me such as books, music, TV
-shows, and sports. Though it goes mostly unupdated nowadays, I do try
-to publish content from time to time.
+thoughts on films I've seen at [[https://www.balajithots.com][Balaji Thots]]. Over there, you can also
+find my thoughts on other topics that interest me such as books,
+music, TV shows, and sports. Though it goes mostly unupdated nowadays,
+I do try to publish content from time to time.
 
-I'm active on [Twitter](https://twitter.com/balajisivaraman), where
-you can find me ranting about the Indian government, capitalism, or
-Manchester United.
-
-### Contact
+I'm active on [[https://twitter.com/balajisivaraman][Twitter]], where you can find me ranting about the Indian
+government, capitalism, or Manchester United.
+** Contact
 
 If you wish to contact me, you may email me:
-[balaji@balajisivaraman.com](mailto:balaji@balajisivaraman.com)
-
-### PGP Key
+[[mailto:balaji@balajisivaraman.com][balaji@balajisivaraman.com]]
+** PGP Key
 
 If you wish to contact me securely, you can find the details over at
-[Keybase](https://keybase.io/balajisivaraman).
+[[https://keybase.io/balajisivaraman][Keybase]].
 
-The key is also pasted below, or it can be downloaded from
-[here](../balajisivaraman.asc).
-
-```pgp
+#+BEGIN_SRC
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBFfClREBEADSAF+ZvnTNk7a7Rk51V/6WddxxG2i/21NPX3DgKEqn+5bAPwDH
@@ -94,4 +84,4 @@ pJnZav83Wxq31cZeHlVQ5tGq5dKUtSVRvjI3NZjBpn6KR7uqpupIA4Q0EMuvlMEh
 a+OScI7QUJnKyig=
 =g3Pq
 -----END PGP PUBLIC KEY BLOCK-----
-```
+#+END_SRC
