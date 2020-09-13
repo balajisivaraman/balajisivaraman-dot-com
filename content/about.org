@@ -1,28 +1,22 @@
-#+date: 2017-08-20T21:38:52+08:00
-#+lastmod: 2017-08-28T21:41:52+08:00
+#+date: 2020-09-13
 #+title: About
 #+type: page
 
-My name is Balaji Sivaraman, and [[https://github.com/balajisivaraman/][I'm a programmer]]. I work as an
-application developer for ThoughtWorks in Chennai. My day-to-day work
-mostly involves writing microservices using Java and Spring, with a
-little bit of Ruby on Rails thrown in for good measure. I mostly spend
-my free time nowadays learning [[https://www.rust-lang.org/][Rust Lang]] and contributing to various
-open source projects written in it.
+My name is Balaji Sivaraman, and [[https://github.com/balajisivaraman/][I'm a programmer]]. I work as a Lead
+Developer for ThoughtWorks in Chennai. My day-to-day work mostly
+involves rewriting legacy enterprise applications using microservices
+built on top of Java and Spring. In my spare time, I am curious about
+learning different programming languages, and I currently dabble in
+the [[https://www.rust-lang.org/][Rust]] language.
+
+I started Bytes and Words in 2020 as an outlet for all the knowledge I
+had accumulated over the years of working as an engineer. On these
+pages, you will find my thoughts on software architecture, technical
+leadership and everything in between.
 
 You can find me under the handle =balajisivaraman= on most websites.
-(Links to social media handles are available in the footer.)
+(Links to social media handles are available in the sidebar.)
 
-** Personal Stuff
-
-I consider myself a serious cinephile. I maintain a blog on my
-thoughts on films I've seen at [[https://www.balajithots.com][Balaji Thots]]. Over there, you can also
-find my thoughts on other topics that interest me such as books,
-music, TV shows, and sports. Though it goes mostly unupdated nowadays,
-I do try to publish content from time to time.
-
-I'm active on [[https://twitter.com/balajisivaraman][Twitter]], where you can find me ranting about the Indian
-government, capitalism, or Manchester United.
 ** Contact
 
 If you wish to contact me, you may email me:
