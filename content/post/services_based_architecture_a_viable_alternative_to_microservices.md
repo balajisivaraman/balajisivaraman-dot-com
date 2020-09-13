@@ -7,7 +7,6 @@ categories = [
   "Software Architecture"
 ]
 slug = "services-based-architecture-viable-alternative-to-microservices"
-preview = true
 +++
 
 ## Introduction
