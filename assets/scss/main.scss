@@ -29,6 +29,11 @@ body {
 
 p {
     margin-bottom: 1.4em;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 h1, h2, h3, h4 {
@@ -226,7 +231,10 @@ article {
 blockquote {
     margin-left: 0;
     padding-left: 30px;
-    border-left: 6px solid #9E9E9E;
+    border-left: 6px solid #BDBDBD;
+    font-size: 1.6em;
+    font-family: $heading-font;
+    line-height: 1.4em;
 }
 
 .archives {
@@ -275,6 +283,10 @@ blockquote {
 
         ul {
             padding-left: 2em;
+        }
+
+        ol {
+            padding-left: 1.8em;
         }
     }
 }

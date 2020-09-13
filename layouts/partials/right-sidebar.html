@@ -1,6 +1,10 @@
 <div id="right-content" class="col-md-3">
   <div class="sidebar">
     <div class="sticky">
+      <div class="sidebar-item" id="categories">
+        <h4>Table of Contents</h4>
+        {{ .TableOfContents }}
+      </div>
       <div class="sidebar-item" id="social-icons">
         <h4>Follow Me</h4>
         {{ partial "social-icons.html" . }}
