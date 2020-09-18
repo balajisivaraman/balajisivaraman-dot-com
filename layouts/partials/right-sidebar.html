@@ -14,8 +14,8 @@
       <div class="sidebar-item" id="categories">
         <h4>Categories</h4>
         <ul style="padding: 0; margin: 1em 0;">
-          {{ range $.Site.Taxonomies.categories.ByCount }}
-          <li style="display: inline-block"><a class="box category" href="/categories/{{ .Term | urlize  }}">{{ .Term | title }} ({{ .Count }})</a></li>
+          {{ range .Site.Taxonomies.categories.ByCount }}
+          <li style="display: inline-block"><a class="box category" href="{{ .Page.Permalink | relURL }}">{{ .Page.Title }} ({{ .Count }})</a></li>
           {{ end }}
         </ul>
       </div>
