@@ -1,6 +1,7 @@
 +++
 title = "Services Based Architecture - A Viable Alternative to Microservices"
 author = ["Balaji Sivaraman"]
+description = "In this article, we explore some of the challenges in adopting the microservices architectural style in a traditional enterprise transformation journey with a pre-existing monolithic legacy database. Additionally, we also learn about the services-based architectural style and understand how it can function as a viable alternative to microservices in such scenarios."
 date = "2020-09-13"
 toc = true
 categories = [
