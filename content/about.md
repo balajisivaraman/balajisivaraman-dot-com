@@ -5,13 +5,13 @@ date = "2020-09-13"
 
 My name is Balaji Sivaraman, and [I'm a software
 developer](https://github.com/balajisivaraman/). I work as a Lead
-Technologist for ThoughtWorks in Chennai. My day-to-day work (mostly)
-involves rewriting legacy enterprise applications using a variety of
-architectural styles built (often) on top of Java and Spring Boot. In
-my spare time, I am curious about learning different programming
-languages, especially modern developments to the programming language
-space, and I currently dabble in the
-[Rust](https://www.rust-lang.org/) language.
+Technologist for [ThoughtWorks](https://www.thoughtworks.com/). My
+day-to-day work (mostly) involves rewriting legacy enterprise
+applications using a variety of architectural styles built (often) on
+top of Java and Spring Boot. In my spare time, I am curious about
+learning different programming languages, especially modern
+developments to the programming language space, and I currently dabble
+in the [Rust](https://www.rust-lang.org/) language.
 
 I revamped this blog and gave it a new identity in 2020 as an outlet
 for all the knowledge I had accumulated over the years of working as a

@@ -6,7 +6,6 @@ toc = true
 categories = [
   "Software Architecture"
 ]
-slug = "services-based-architecture-viable-alternative-to-microservices"
 +++
 
 ## Introduction
@@ -50,7 +49,7 @@ For our journey, let us consider a problem statement that will be
 familiar to folks who have worked on any sort of large-scale
 enterprise transformation.
 
-![A sample architecture of a legacy enterprise with a monolithic database and multiple legacy applications reading from and writing to it](/images/LegacyEcosystem.png)
+{{< img src="LegacyEcosystem.png" alt="A sample architecture of a legacy enterprise with a monolithic database and multiple legacy applications reading from and writing to it" >}}
 
 What we see in the above picture is the following:
 
@@ -88,7 +87,7 @@ Newman](https://samnewman.io/patterns/refactoring/strangler-fig-application/)
 refer to as the Strangler Fig Application. Unsurprisingly this pattern
 goes well with a microservices-based architecture.
 
-![A strangulated architecture with a single microservice co-existing with the existing legacy applications](/images/LegacyEcosystemWithMicroservices.png)
+{{< img src="LegacyEcosystemWithMicroservices.png" alt="A strangulated architecture with a single microservice co-existing with the existing legacy applications" >}}
 
 In this pattern, we simply find and start with the highest-value,
 lowest-cost domain from the business standpoint, build a
@@ -99,7 +98,7 @@ built on top of a multitude of microservices, each with its own
 database and deployment pipeline, thus reaching the enterprise
 promised land.
 
-![A purely microservices based architecture demonstrating the end result of a complete legacy rewrite journey](/images/MicroservicesPromisedLand.png)
+{{< img src="MicroservicesPromisedLand.png" alt="A purely microservices based architecture demonstrating the end result of a complete legacy rewrite journey" >}}
 
 While that sounds enticing, there are some pitfalls and hurdles one
 normally faces thanks to the peculiarities of the enterprise legacy
@@ -113,7 +112,7 @@ legacy rewrite from reaching the microservices-filled promised land.
 To illustrate why this is the case, let me expand our original legacy
 diagram to more closely align with reality.
 
-![The original legacy architecture showing the presence of batch jobs and external applications that read from and write to the legacy database](/images/LegacyEcosystemWithDependencies.png)
+{{< img src="LegacyEcosystemWithDependencies.png" alt="The original legacy architecture showing the presence of batch jobs and external applications that read from and write to the legacy database" >}}
 
 As we see now, it is not just the multiple legacy applications that
 read from and write to our monolithic database, there's also:
@@ -168,7 +167,7 @@ database.
 To borrow the diagram from The Fundamentals of Software Architecture,
 we end up with an architecture that somewhat looks like this:
 
-![A demonstration of a services-based architecture with multiple strangulated services that all read from and write to the existing legacy database](/images/LegacyEcosystemWithServicesBased.png)
+{{< img src="LegacyEcosystemWithServicesBased.png" alt="A demonstration of a services-based architecture with multiple strangulated services that all read from and write to the existing legacy database" >}}
 
 Now there are many variations of this architectural style that I won't
 go deep into. I suggest reading the above book to get a good
@@ -291,7 +290,7 @@ former that makes it worth considering.
 To understand more deeply about different architecture styles and
 services-based architecture in particular, I highly recommend Mark
 Richards' and Neal Ford's new book, [Fundamentals of
-Software](http://fundamentalsofsoftwarearchitecture.com/).
+Software Architecture](http://fundamentalsofsoftwarearchitecture.com/).
 
 ## Conclusion
 

@@ -1,0 +1,15 @@
+{{ $src := .Page.Resources.GetMatch (printf "images/%s" (.Get "src")) }}
+{{ $tiny := $src.Resize "500x" }}
+{{ $small := $src.Resize "800x" }}
+{{ $img := imageConfig ($src.RelPermalink | printf "content/post/%s" ) }}
+
+<img
+  srcset='
+    {{ $tiny.RelPermalink }} 500w,
+    {{ $small.RelPermalink }} 800w,
+    {{ $src.RelPermalink }}, {{ $img.Width }}'
+  sizes="(max-width: 600px) 500px,
+         (max-width: 800px) 800px
+         {{ $img.Width }}"
+  src="{{ $src.RelPermalink }}"
+  {{ with .Get "alt" }}alt='{{.}}'{{ end }}>
