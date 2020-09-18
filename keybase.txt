@@ -1,0 +1,86 @@
+==================================================================
+https://keybase.io/balajisivaraman
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.balajisivaraman.com
+  * I am balajisivaraman (https://keybase.io/balajisivaraman) on keybase.
+  * I have a public key with fingerprint DC9D 2BF2 7513 CACE 7F3E  D526 48AE BD08 561B C452
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120a408ac4a2fd11232080aaa0d31342863a2b056e2201759393e6bf8d9ce623dd40a",
+      "fingerprint": "dc9d2bf27513cace7f3ed52648aebd08561bc452",
+      "host": "keybase.io",
+      "key_id": "48aebd08561bc452",
+      "kid": "010124f0504908323383783d0b7931bbab3ca42d0f40f8233a5079751813fd421c390a",
+      "uid": "389b4bfb2510638e2a30ec2476c3be19",
+      "username": "balajisivaraman"
+    },
+    "merkle_root": {
+      "ctime": 1546445640,
+      "hash_meta": "0d3fee007ec96db3d8e23b70ec2e912d76603cf19baa46f42145024b2ac767e8",
+      "seqno": 4220270
+    },
+    "revoke": {
+      "sig_ids": [
+        "36c62cace82fb17d67324212bf5c9ad7c0dabfbd9d7a1811e6af07a3f720e6b80f"
+      ]
+    },
+    "service": {
+      "hostname": "www.balajisivaraman.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1546445652,
+  "expire_in": 157680000,
+  "prev": "52a8852d648f1d851c9071165c4a1d15e5442810095d72a5bfbc1a01340c1191",
+  "seqno": 20,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owFtU31MVlUcfklJMB0koVOy9FKm8x2dj/v5LlmxVCwwzaGpuOu595wLV+C9eN+X
+l1CYuhBGmZWzsJDmB6JFmZauKWpiEoKgLtOhOJsfLaVMbaRoqZ3LdG2u+8/dPff5
+Pc/ze36/8/7gfr6YqPSte2NmJh18PerwZcOX7b+Qs1gwHFoiBBYLeazvxfIpC4X1
+PJsKAQFABIgIVGKKBFkUQoQRUAEhBFAMsYhUGRNkAElmCAGoSBrWMJMNS6WayWSE
+KRUBEfyCZQdzmFvo2sEwp6WmRpFhIUWC2CQmUyzMqIRkUSXMoECVZGiYooR4Ya4T
+8iq4OYOEWIrt8DP+offZ+x/8A9/cuWgBCYgaUDHCWMWKiikwFA1DwyAG1xURBZYI
+LJX/JhJQNG5HhdiiIoIm1vp8F/XRYVUzRMMykASBjFWGCAbMRKIim9hgUPOAIeYG
+SQHjaIPkkwV2yI4QlxSQoFDmFwqYm5fPdNdxwl7GZtj2kFASZVGUZBHwPkkoVy9g
+YeK5p9hiDACFmZpMDUy5IjYUT5JpEFFFlgE2LagZhIiyxe2KEkCigYipyApTuZ0Q
+Wxh0hIDIp4IUwB24LOLkMU88ZOfw9ELC/qrAXAHLpoy8EajIMqBCZQUjzseHI5ka
+oYoJKOGNU40qhIcDmUwsoBBsKQjwOavAEuaVeXJuxDb76L2B3Q+iuLg45aEwUkyn
+gNsrdJ2wYzr5HJQbDheGAl5I4ZLCvipm6Pf5dMMOUr45vCLC3JDtBHloHPlQfhLy
+C+zNQttluu0hJEVWAX88HRbhlBIiqiohyhfMglSVoKkBBUJZ4msNKZSYJPJVhgBo
+ElUQkXjHJiSALzgwIdTgf4EiThomOZyTxxgk4SKXCWUDqx7B/X1RMb6RQ0f3P1M7
+/s+ihLYjS1JPjHlw26If8a6ab2Bs/IOTzt/j7j5b274rc3R9+tKsylqt+5W9SXV5
+NVd7983bE3+v6mXH93PC4eQjsZ8412vL66uUJbEXy+vgorX21daM3K3XBk+q2rWh
+cO6rDT3Zs+mBruEX2m8mZ9z5pfnsU8sGfR7XeKV09bDKrFkHd2fWDDlyKervNb0/
+jBq05fy5zOSO3uO/XV6xatfF9U0vJj6ZVhc5kDZxxg1fsZHalNdbkzFj29Et9Q23
+dwRPJ6SMiZ52bsWkE083dr09Ydlrk++4PdN7hsRVrzuoNx4fu1YeP3rD2muCv7HU
+/1Pi7OxfByw6tvc2mxho0cefrN4U1ZFe893lCU1svthdOnzKox07JqVeBxWzi0/L
+1/6pHBfz+NdDljbnbh6oxH3WknhvXWJidM+I1tajw0Yt7C1XrPbmEd/E0FuVP450
+cfax7cvfG/r9+req+4XbvvUP6zzjez7UkLB81s6OzBvb9h+fcqd+Ubj8KzjLSZ7/
+4W4CNt7YM2Cz2Doo9lbq6uiuoqZxy7siZbHdh+qTVD34GImfk7IJ7cvcOrYzvQXc
+vRT5tKA6oDdsTC1ZOfVmSVa/2Gmqfm5dVsW4BU+0n0iUa6duq51wpbvnVpr8XMbw
+i1XLxv4hJUW1xO/UX5oX3Rxc6d8X+OL89UD2hneyfJ0np358as3pNlfZvnryM5O3
+k+lzVn106FRpxczpL9ycWBP64I133S+z6pb81VZRNkBPOzvjXw==
+=l63V
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/balajisivaraman
+
+==================================================================

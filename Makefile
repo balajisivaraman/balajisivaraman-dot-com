@@ -2,16 +2,16 @@ all:
 	@echo Please pick a target
 
 clean:
-	rm -rf public/balajisivaraman-dot-com
+	rm -rf public/balajisivaraman
 
 serve:
-	hugo server -D -w -c content/ --config config.toml -d public/balajisivaraman-dot-com/
+	hugo server -D -w -c content/ --config config.toml -d public/balajisivaraman/
 
 push:
 	git push origin master
 
 build:
-	hugo -c content/ --config config.toml -d public/balajisivaraman-dot-com/
+	hugo -c content/ --config config.toml -d public/balajisivaraman/
 	cp keybase.txt public/balajisivaraman/
 	cp balajisivaraman.asc public/balajisivaraman/
 
