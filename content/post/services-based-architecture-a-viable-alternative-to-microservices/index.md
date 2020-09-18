@@ -13,35 +13,38 @@ categories = [
 Ever since Martin Fowler and James Lewis wrote their [original
 article](https://martinfowler.com/articles/microservices.html) on
 microservices in 2014, it has become the defacto standard for any sort
-of large-scale enterprise architecture. Microservices has allowed
-enterprises to transform their IT organizational structure along
-business unit lines, where each unit delivers separately deployable
-services whose only interaction points are the APIs (usually REST) they
-expose. Coupled with the rise of Docker containers and especially
-platforms like Kubernetes, microservices has also considerably eased
-the burden for enterprise Ops teams. This has meant that the
-modern enterprise that adopts microservices is capable of churning out
-features at a tremendous pace and of high quality.
+of large-scale enterprise architecture. The microservices
+architectural style has allowed enterprises to transform their IT
+organizational structure along business unit lines, where each unit
+delivers separately deployable services whose only interaction points
+are the APIs (usually REST) they expose. Coupled with the rise of
+Docker containers and especially platforms like Kubernetes,
+microservices has also considerably eased the burden for enterprise
+Ops teams. This has meant that the modern enterprise that adopts
+microservices is capable of churning out features at a tremendous pace
+and with high quality.
 
-Things are not always rosy though, as Martin Fowler has [written
-about](https://martinfowler.com/articles/microservice-trade-offs.html).
-Like almost everything else in software engineering, microservices
-requires architects to carefully consider many factors including, and
-especially, the existing IT landscape of the organisation. While
-there's little doubt in my mind that microservices as the default for
-a [Greenfield
-project](https://en.wikipedia.org/wiki/Greenfield%5Fproject) makes
-perfect sense, introducing it into a legacy ecosystem that isn't ready
-for it is a non-trivial challenge.
+Having said that, the microservices architecture comes with its own
+set of challenges, as Martin Fowler himself wrote about on [his
+website](https://martinfowler.com/articles/microservice-trade-offs.html).
+Like almost everything else in software engineering, the microservices
+architecture requires architects to carefully consider many factors
+including, and especially, the existing IT landscape of the
+organisation. While choosing microservices as the default for a
+[Greenfield
+project](https://en.wikipedia.org/wiki/Greenfield%5Fproject) might
+largely make sense (conditions applied), introducing it into a legacy
+ecosystem that isn't ready for it is a non-trivial challenge.
 
 In this article, we will take a look at one such problem statement
 where a microservices approach appears to be a good fit due to the
-many benefits it offers. But when we try to introduce this pattern, we
-run into some hurdles, forcing us to consider alternatives. We will
-also learn about one such alternative, which will prove to be quite
-effective in this particular use-case. (Note that this blog post is
-heavily inspired by a recent legacy transformation journey I have been
-on for a client in the financial services domain.)
+many benefits it offers. However, when we try to introduce this
+pattern, we run into some hurdles, forcing us to consider
+alternatives. We will also learn about one such alternative, which
+will prove to be quite effective in this particular use-case. (Note
+that this blog post is heavily inspired by a recent legacy
+transformation journey I have been on for a client in the financial
+services domain.)
 
 ## The Enterprise-Wide Legacy Database Problem
 
@@ -137,7 +140,7 @@ As one might imagine, this is a non-trivial problem at the best of
 times. A quick search of the Internet tells us as much. (A random
 search yielded me
 [this](https://stackoverflow.com/questions/8819042/database-synchronization-between-a-new-greenfield-project-database-and-old-proje)
-SO question, of which the top answer provides many solutions also.)
+SO question, of which the top answer provides many solutions too.)
 
 It is not that there aren't solutions to this particular problem. On
 the contrary, there are many. It is simply that most of them can be
@@ -213,8 +216,8 @@ Going back to our data-syncing challenge, it is worth mentioning that
 building a syncing mechanism is not only time and cost consuming, but
 also adds a layer of complexity to our architecture. This mechanism is
 code we will have to write and maintain. Not only that, no such
-mechanism is fool-proof, and if we happen to end with missing records,
-debugging can be a pain.
+mechanism is fool-proof, and if we happen to end up with missing
+records, debugging can be a pain.
 
 Once again, services based architecture eradicates this completely. We
 end up with an architecture that is simpler and easier to maintain in
@@ -257,9 +260,9 @@ libraries.
 
 ### Do not be eager to split services
 
-In one of the key decisions that went astray, we chose to split a
-service into two too eagerly. While we had our reasons at the time, it
-was only after we began developing that we realised the folly of this
+In one of the key decisions that went astray, we eagerly chose to
+split a service into two. While we had our reasons at the time, it was
+only after we began developing that we realised the folly of this
 decision. Implementation of our first story within the new service
 ended up being such a massive copy-and-paste effort from another
 service that we eventually decided to go back on this decision.
@@ -269,14 +272,25 @@ services in this architectural style typically tend to be
 coarse-grained rather than fine-grained. This is a key lesson to keep
 in mind when adopting this style.
 
+### Do not be afraid to mix and match with microservices
+
+When working with (and rewriting) a pre-existing legacy database,
+there are high chances that we will discover new domain concepts not
+already prevalent in the business ecosystem. In such cases, we should
+not shy away from developing a traditional microservice for it.
+
+That is one of the primary advantages of this architectural style: its
+ability to co-exist with other traditional microservices, functioning
+similar to one by exposing and consuming Restful APIs.
+
 ## When to Use
 
-One thing to bear in mind is that services-based architecture must
-usually be seen as an intermediate step in the legacy rewrite journey
-and not the destination. With this style, tight coupling at the
-database level persists obviously, and this makes evolving our
-architecture to the ever-changing user needs more challenging than
-with a microservices approach.
+One thing to bear in mind is that the services-based architectural
+style must usually be seen as an intermediate step in the legacy
+rewrite journey and not the destination. With this style, tight
+coupling at the database level persists obviously, and this makes
+evolving our architecture to the ever-changing user needs considerably
+more challenging than with a microservices approach.
 
 That being said, I still consider it a pragmatic choice for many
 scenarios where microservices might be deemed too expensive; the
@@ -297,7 +311,7 @@ Software Architecture](http://fundamentalsofsoftwarearchitecture.com/).
 The services-based architecture style presents a viable alternative to
 other distributed architectural styles such as microservices or
 event-driven. Their simplicity and cost-effectiveness make up for
-shortcomings such as tighter database coupling making it a worthy
+shortcomings such as tighter database coupling, making it a worthy
 addition to the architect's toolbox.
 
 This is especially true of legacy rewrites in complex enterprise
