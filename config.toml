@@ -1,6 +1,6 @@
-baseURL = "https://www.bytesandwords.com/"
+baseURL = "https://www.balajisivaraman.com/"
 languageCode = "en-us"
-title = "Bytes and Words"
+title = "Balaji Sivaraman"
 
 # Enable Chroma Syntax Highlighting
 pygmentsOptions = "linenos=true"
@@ -15,9 +15,9 @@ post = "/:slug"
 
 [params]
 author = "Balaji Sivaraman"
-description = "A blog about programming, systems design and tech leadership."
-bio = "Hi, I'm Balaji Sivaraman, a lead technologist at ThoughtWorks. On these pages, you will find my thoughts on programming languages, software architecture, and technical leadership."
-disqusShortname = "https-www-bytesandwords-com"
+description = "Software Developer, Lifelong Learner, Writer, Speaker, Teacher"
+bio = "Hi, I'm Balaji Sivaraman, a Lead Technologist at ThoughtWorks. On these pages, you will find my thoughts on programming languages, software architecture, and technical leadership."
+disqusShortname = "https-www-balajisivaraman-com"
 enable_comments = true
 
 [markup]

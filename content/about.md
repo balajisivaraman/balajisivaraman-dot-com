@@ -1,32 +1,38 @@
-#+date: 2020-09-13
-#+title: About
-#+type: page
++++
+title = "About"
+date = "2020-09-13"
++++
 
-My name is Balaji Sivaraman, and [[https://github.com/balajisivaraman/][I'm a programmer]]. I work as a Lead
-Developer for ThoughtWorks in Chennai. My day-to-day work mostly
-involves rewriting legacy enterprise applications using microservices
-built on top of Java and Spring. In my spare time, I am curious about
-learning different programming languages, and I currently dabble in
-the [[https://www.rust-lang.org/][Rust]] language.
+My name is Balaji Sivaraman, and [I'm a software
+developer](https://github.com/balajisivaraman/). I work as a Lead
+Technologist for ThoughtWorks in Chennai. My day-to-day work (mostly)
+involves rewriting legacy enterprise applications using a variety of
+architectural styles built (often) on top of Java and Spring Boot. In
+my spare time, I am curious about learning different programming
+languages, especially modern developments to the programming language
+space, and I currently dabble in the
+[Rust](https://www.rust-lang.org/) language.
 
-I started Bytes and Words in 2020 as an outlet for all the knowledge I
-had accumulated over the years of working as an engineer. On these
-pages, you will find my thoughts on software architecture, technical
+I revamped this blog and gave it a new identity in 2020 as an outlet
+for all the knowledge I had accumulated over the years of working as a
+software developer. On these pages, you will find my thoughts on
+general software development, software architecture, technical
 leadership and everything in between.
 
-You can find me under the handle =balajisivaraman= on most websites.
+You can find me under the handle `balajisivaraman` on most websites.
 (Links to social media handles are available in the sidebar.)
 
-** Contact
+## Contact
 
 If you wish to contact me, you may email me:
-[[mailto:balaji@balajisivaraman.com][balaji@balajisivaraman.com]]
-** PGP Key
+[balaji@balajisivaraman.com](mailto:balaji@balajisivaraman.com)
+
+## PGP Key
 
 If you wish to contact me securely, you can find the details over at
-[[https://keybase.io/balajisivaraman][Keybase]].
+[Keybase](https://keybase.io/balajisivaraman).
 
-#+BEGIN_SRC
+```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBFfClREBEADSAF+ZvnTNk7a7Rk51V/6WddxxG2i/21NPX3DgKEqn+5bAPwDH
@@ -78,4 +84,4 @@ pJnZav83Wxq31cZeHlVQ5tGq5dKUtSVRvjI3NZjBpn6KR7uqpupIA4Q0EMuvlMEh
 a+OScI7QUJnKyig=
 =g3Pq
 -----END PGP PUBLIC KEY BLOCK-----
-#+END_SRC
+```
