@@ -145,12 +145,12 @@ SO question, of which the top answer provides many solutions too.)
 
 It is not that there aren't solutions to this particular problem. On
 the contrary, there are many. It is simply that most of them can be
-time and cost consuming to implement. If the enterprise has plenty of
-time and cost at their disposal to go ahead and do this, it would be
-the ideal choice. (And I have seen it done successfully on past
-projects with similar landscapes.)
+time and money consuming to implement. If the enterprise has plenty of
+time and an unlimited budget at their disposal to go ahead and do
+this, it would be the ideal choice. (And I have seen it done
+successfully on past projects with similar landscapes.)
 
-But what happens when time and cost are in limited supply and we still
+But what happens when time and money are in limited supply and we still
 need to deliver functioning software built on modern technologies
 solving the particular business problem at hand?
 
@@ -195,10 +195,10 @@ individual services, if we take the time to revisit our earlier
 problem statement, we will find that a few other benefits specific to
 services-based architecture reveal themselves.
 
-### Time and Cost Savings
+### Time and Money Savings
 
 One of the considerations I put forth as to why a pure microservices
-approach was not possible was that we didn't have the time and cost
+approach was not possible was that we didn't have the time and budget
 necessary to implement a two-way data sync mechanism between the
 legacy and the new database.
 
@@ -208,17 +208,17 @@ being well-designed, this is what gives us the confidence to adopt
 this architectural style in this particular instance.
 
 By reusing the legacy database, we will have savings in terms of both
-time and cost, resulting in a faster time to market for our legacy
-rewrite.
+time and overall budget, resulting in a faster time to market for our
+legacy rewrite.
 
 ### Simplicity
 
 Going back to our data-syncing challenge, it is worth mentioning that
-building a syncing mechanism is not only time and cost consuming, but
-also adds a layer of complexity to our architecture. This mechanism is
-code we will have to write and maintain. Not only that, no such
-mechanism is fool-proof, and if we happen to end up with missing
-records, debugging can be a pain.
+building a syncing mechanism is not only time and budget consuming,
+but also adds a layer of complexity to our architecture. This
+mechanism is code we will have to write and maintain. Not only that,
+no such mechanism is fool-proof, and if we happen to end up with
+missing records, debugging can be a pain.
 
 Once again, services based architecture eradicates this completely. We
 end up with an architecture that is simpler and easier to maintain in
@@ -311,7 +311,7 @@ Software Architecture](http://fundamentalsofsoftwarearchitecture.com/).
 
 The services-based architecture style presents a viable alternative to
 other distributed architectural styles such as microservices or
-event-driven. Their simplicity and cost-effectiveness make up for
+event-driven. Their simplicity and effectiveness make up for
 shortcomings such as tighter database coupling, making it a worthy
 addition to the architect's toolbox.
 
