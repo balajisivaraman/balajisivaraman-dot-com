@@ -4,16 +4,27 @@ date = "2020-09-13"
 +++
 
 My name is Balaji Sivaraman, and [I'm a software
-developer](https://github.com/balajisivaraman/). I work as a Lead
-Technologist for [ThoughtWorks](https://www.thoughtworks.com/). My
-day-to-day work (mostly) involves rewriting legacy enterprise
-applications using a variety of architectural styles built (often) on
-top of Java and Spring Boot. In my spare time, I am curious about
-learning different programming languages, especially modern
-developments to the programming language space, and I currently dabble
-in the [Rust](https://www.rust-lang.org/) language.
+developer](https://github.com/balajisivaraman/). Thank you for
+visiting my website.
 
-I revamped this blog and gave it a new identity in 2020 as an outlet
+I currently work as a Lead Technologist for
+[ThoughtWorks](https://www.thoughtworks.com/). My current day job
+(mostly) involves working closely with clients who are on a legacy
+modernisation journey, rewriting their existing applications using a
+variety of architectural styles, adhering to modern Agile development
+practices, and continuously delivering business value for them. In
+this process, I have worked with clients in a variety of domains,
+primarily including retail and financial services.
+
+In my spare time, I am passionate about programming languages,
+especially those that push the boundaries of modern development
+practices. This used to be Scala a few years back, where I got
+involved in the strongly-typed functional programming paradigm. More
+recently, I have a keen eye on Rust and find its blend of modern
+language design constructs and memory-safe, systems programming
+constructs fascinating. I am co-organiser of the Rust Chennai meetup.
+
+ revamped this blog and gave it a new identity in 2020 as an outlet
 for all the knowledge I had accumulated over the years of working as a
 software developer. On these pages, you will find my thoughts on
 general software development, software architecture, technical
