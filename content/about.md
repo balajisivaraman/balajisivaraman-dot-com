@@ -18,17 +18,19 @@ primarily including retail and financial services.
 
 In my spare time, I am passionate about programming languages,
 especially those that push the boundaries of modern development
-practices. This used to be Scala a few years back, where I got
-involved in the strongly-typed functional programming paradigm. More
-recently, I have a keen eye on Rust and find its blend of modern
-language design constructs and memory-safe, systems programming
-constructs fascinating. I am co-organiser of the Rust Chennai meetup.
+practices. This used to be Scala a few years back, when I got
+introduced to the strongly-typed functional programming paradigm. More
+recently, I have had a keen eye on the
+[Rust](https://www.rust-lang.org/) language and find its blend of
+modern language design constructs and memory-safe, systems programming
+constructs fascinating. I am a co-organiser of the [Rust Chennai
+Meetup](https://www.meetup.com/mad-rs/).
 
- revamped this blog and gave it a new identity in 2020 as an outlet
-for all the knowledge I had accumulated over the years of working as a
-software developer. On these pages, you will find my thoughts on
-general software development, software architecture, technical
-leadership and everything in between.
+I revamped this website and gave it a new identity in 2020 as an
+outlet for all the knowledge I had accumulated over the years of
+working as a software developer. On these pages, you will find my
+thoughts on general software development, software architecture,
+technical leadership and everything in between.
 
 You can find me under the handle `balajisivaraman` on most websites.
 (Links to social media handles are available in the sidebar.)
