@@ -9,8 +9,8 @@ $link: #1565C0;
 $link-hover: #42A5F5;
 
 /* Fonts */
-$body-font: 'Merriweather', georgia, serif;
-$heading-font: 'Oswald', helvetica, sans-serif;
+$body-font: 'Roboto Slab', georgia, serif;
+$heading-font: 'Roboto', helvetica, sans-serif;
 $subtext-font: 'Work Sans', helvetica, sans-serif;
 
 html {
@@ -125,6 +125,7 @@ a.box {
 
 /* Page Wrapper */
 #wrapper {
+    font-weight: 300;
     min-height: 87.2vh;
     padding: 1.5em 1em 2.5em;
 }
