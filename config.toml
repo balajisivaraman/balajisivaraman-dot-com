@@ -4,7 +4,7 @@ title = "Balaji Sivaraman"
 
 # Enable Chroma Syntax Highlighting
 pygmentsOptions = "linenos=true"
-pygmentsStyle = "dracula"
+pygmentsStyle = "github"
 pygmentsCodefencesGuessSyntax = true
 pygmentsCodeFences = true
 
