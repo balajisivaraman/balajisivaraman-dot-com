@@ -38,7 +38,7 @@ img {
     margin-bottom: 1.4em;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     margin: 0.8em 0 0.5em;
     font-family: $heading-font;
     font-weight: inherit;
@@ -121,6 +121,11 @@ a.box {
     content: "";
     clear: both;
     display: table;
+}
+
+.social-share-icon {
+    display: inline-block;
+    width: 60px;
 }
 
 /* Page Wrapper */

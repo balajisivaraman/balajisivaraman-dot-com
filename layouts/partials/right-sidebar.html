@@ -4,7 +4,11 @@
       {{ if eq .Type "post" }}
       <div class="sidebar-item" id="categories">
         <h4>Table of Contents</h4>
-          {{ .TableOfContents }}
+        {{ .TableOfContents }}
+      </div>
+      <div class="sidebar-item" id="social-icons">
+        <h4>Share This Article</h4>
+        {{ partial "socialshare.html" . }}
       </div>
       {{ end }}
       <div class="sidebar-item" id="social-icons">
