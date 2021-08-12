@@ -11,7 +11,11 @@
         <meta name="title" content="{{ .Site.Params.author }} - {{ .Site.Params.bio }}">
         {{ end }}
         <meta name="author" content="{{ .Site.Params.author }}">
+        {{ if eq .Type "post" }}
+        <meta name="description" content="{{ .Description }}">
+        {{ else }}
         <meta name="description" content="{{ .Site.Params.description }}">
+        {{ end }}
         <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <link rel="shortcut icon" href="/favicon.ico">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
