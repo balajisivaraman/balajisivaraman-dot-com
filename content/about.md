@@ -8,7 +8,7 @@ developer](https://github.com/balajisivaraman/). Thank you for
 visiting my website.
 
 I currently work as a Lead Technologist for
-[ThoughtWorks](https://www.thoughtworks.com/). My current day job
+[Thoughtworks](https://www.thoughtworks.com/). My current day job
 (mostly) involves working closely with clients who are on a legacy
 modernisation journey, rewriting their existing applications using a
 variety of architectural styles, adhering to modern Agile development
