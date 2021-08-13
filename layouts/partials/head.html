@@ -16,6 +16,20 @@
         {{ else }}
         <meta name="description" content="{{ .Site.Params.description }}">
         {{ end }}
+        <meta property="og:type" content="website">
+        {{ if eq .Type "post" }}
+        <title>{{ .Title }} - {{ .Site.Params.author }}</title>
+        <meta property="og:title" content="{{ .Title }} - {{ .Site.Params.author }}">
+        {{ else }}
+        <title>{{ .Site.Params.author }} - {{ .Site.Params.bio }}</title>
+        <meta property="og:title" content="{{ .Site.Params.author }} - {{ .Site.Params.bio }}">
+        {{ end }}
+        {{ if eq .Type "post" }}
+        <meta property="og:description" content="{{ .Description }}">
+        {{ else }}
+        <meta property="og:description" content="{{ .Site.Params.description }}">
+        {{ end }}
+        <meta property="og:url" content="{{ .Permalink }}">
         <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <link rel="shortcut icon" href="/favicon.ico">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
