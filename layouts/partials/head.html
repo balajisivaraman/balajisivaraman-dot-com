@@ -13,10 +13,11 @@
         <meta name="author" content="{{ .Site.Params.author }}">
         {{ if eq .Type "post" }}
         <meta name="description" content="{{ .Description }}">
+        <meta property="og:type" content="article">
         {{ else }}
         <meta name="description" content="{{ .Site.Params.description }}">
-        {{ end }}
         <meta property="og:type" content="website">
+        {{ end }}
         {{ if eq .Type "post" }}
         <title>{{ .Title }} - {{ .Site.Params.author }}</title>
         <meta property="og:title" content="{{ .Title }} - {{ .Site.Params.author }}">
