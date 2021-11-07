@@ -9,8 +9,9 @@ $link: #1565C0;
 $link-hover: #42A5F5;
 
 /* Fonts */
-$body-font: 'Roboto Slab', georgia, serif;
-$heading-font: 'Roboto', helvetica, sans-serif;
+$body-font: 'Merriweather', georgia, serif;
+$roboto: 'Roboto', helvetica, sans-serif;
+$heading-font: 'Staatliches', helvetica, sans-serif;
 $subtext-font: 'Work Sans', helvetica, sans-serif;
 
 html {
@@ -159,7 +160,7 @@ header {
 
         .blog-title {
             font-size: 2.4em;
-            font-family: $heading-font;
+            font-family: $roboto;
 
             a {
                 color: $header-footer-fg;
@@ -183,7 +184,7 @@ header {
                     display: inline-block;
 
                     a {
-                        font-family: $heading-font;
+                        font-family: $roboto;
                         font-size: 1.2em;
                         padding: 8px 10px;
                         color: $header-footer-fg;
@@ -241,7 +242,7 @@ blockquote {
     padding-left: 30px;
     border-left: 6px solid #BDBDBD;
     font-size: 1.6em;
-    font-family: $heading-font;
+    font-family: $roboto;
     line-height: 1.4em;
 }
 
