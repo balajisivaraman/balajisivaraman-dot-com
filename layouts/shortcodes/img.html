@@ -1,7 +1,7 @@
 {{ $src := .Page.Resources.GetMatch (printf "images/%s" (.Get "src")) }}
 {{ $tiny := $src.Resize "500x" }}
 {{ $small := $src.Resize "800x" }}
-{{ $img := imageConfig ($src.RelPermalink | printf "content/post/%s" ) }}
+{{ $img := imageConfig ($src.RelPermalink | printf "content/blog/post/%s" ) }}
 
 <img
   srcset='

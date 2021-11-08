@@ -2,18 +2,18 @@ all:
 	@echo Please pick a target
 
 clean:
-	rm -rf public/balajisivaraman
+	rm -rf public/www
+	rm -rf public/blog
 
 serve:
-	hugo server -D -w -c content/ --config config.toml -d public/balajisivaraman/
+	hugo server -D -w -c content/blog/ --config config.toml -d public/blog/
 
 push:
 	git push origin master
 
 build:
-	hugo -c content/ --config config.toml -d public/balajisivaraman/
-	cp keybase.txt public/balajisivaraman/
-	cp balajisivaraman.asc public/balajisivaraman/
+	hugo -c content/home/ --config config.toml -d public/home/
+	hugo -c content/blog/ --config config.toml -d public/blog/
 
 deploy: clean build
-	rsync -avzO --delete public/balajisivaraman/ balaji@balajisivaraman.com:/home/user-data/www/default/
+	rsync -avzO --delete public/ balaji@balajisivaraman.com:/var/www/balajisivaraman.com/

@@ -7,8 +7,8 @@ pygmentsOptions = "linenos=true"
 pygmentsStyle = "github"
 pygmentsCodefencesGuessSyntax = true
 pygmentsCodeFences = true
-
 preserveTaxonomyNames = true
+disableKinds = ["sitemap"]
 
 [permalinks]
 post = "/:slug"

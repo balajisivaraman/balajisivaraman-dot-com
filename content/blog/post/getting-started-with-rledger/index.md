@@ -7,6 +7,7 @@ toc = true
 categories = [
   "Open Source", "rledger"
 ]
+type = "post"
 +++
 
 

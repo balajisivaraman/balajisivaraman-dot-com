@@ -7,6 +7,7 @@ toc = true
 categories = [
   "Software Architecture"
 ]
+type = "post"
 +++
 
 ## Introduction
