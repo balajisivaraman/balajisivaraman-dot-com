@@ -1,6 +1,7 @@
 +++
 title = "Hello,"
 date = "2020-09-13"
+type = "homepage"
 +++
 
 My name is Balaji Sivaraman, and [I'm a software
