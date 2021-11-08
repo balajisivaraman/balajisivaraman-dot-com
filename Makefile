@@ -5,8 +5,11 @@ clean:
 	rm -rf public/www
 	rm -rf public/blog
 
-serve:
+serve_blog:
 	hugo server -D -w -c content/blog/ --config config.toml -d public/blog/
+
+serve_home:
+	hugo server -D -w -c content/home/ --config config.toml -d public/home/
 
 push:
 	git push origin master
