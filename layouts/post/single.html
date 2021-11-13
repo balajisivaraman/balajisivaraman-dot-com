@@ -22,23 +22,6 @@
                 <article class="post-content">
                     {{ .Content }}
                 </article>
-                {{ if eq .Site.Params.enable_comments true }}
-                <div id="disqus_thread"></div>
-                <script>
-                 var disqus_config = function () {
-                     this.page.url = {{ .Permalink }};
-                     this.page.identifier = {{ .Params.slug }};
-                 };
-                 var disqusSrc = 'https://' + {{ .Site.Params.disqusShortname }} + '.disqus.com/embed.js';
-                 (function() {
-                     var d = document, s = d.createElement('script');
-                     s.src = disqusSrc;
-                     s.setAttribute('data-timestamp', +new Date());
-                     (d.head || d.body).appendChild(s);
-                 })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                {{ end }}
             </div>
         </div>
         {{ partial "right-sidebar.html" . }}

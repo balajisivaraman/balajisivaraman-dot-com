@@ -17,8 +17,6 @@ post = "/:slug"
 author = "Balaji Sivaraman"
 bio = "Software Developer, Lifelong Learner, Writer, Speaker, Teacher"
 description = "Balaji Sivaraman is a Lead Technologist who writes about software development, software architecture, and technical leadership on these pages"
-disqusShortname = "https-www-balajisivaraman-com"
-enable_comments = true
 
 [markup]
   [markup.tableOfContents]
