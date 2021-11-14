@@ -2,10 +2,13 @@
   <div class="sidebar">
     <div class="sticky">
       {{ if eq .Type "post" }}
+      {{ if eq .Params.toc true }}
       <div class="sidebar-item" id="categories">
         <h4>Table of Contents</h4>
         {{ .TableOfContents }}
       </div>
+      {{ end }}
+      {{ if eq .Params.share true }}
       <div class="sidebar-item" id="social-icons">
         <h4>Share This Article</h4>
         {{ partial "socialshare.html" . }}

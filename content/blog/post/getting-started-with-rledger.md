@@ -4,6 +4,7 @@ author = ["Balaji Sivaraman"]
 description = "In this article, I briefly share my earlier experiences in open source before describing the current project I have kick-started. I will talk about how I went about finding an itch to scratch, building on that by setting some goals for the project, and finally how I actually got the ball rolling."
 date = "2021-08-12"
 toc = true
+share = true
 categories = [
   "Software Development"
 ]
