@@ -5,6 +5,9 @@ description = "In this article, I briefly share my earlier experiences in open s
 date = "2021-08-12"
 toc = true
 categories = [
+  "Software Development"
+]
+tags = [
   "Open Source", "rledger"
 ]
 type = "post"

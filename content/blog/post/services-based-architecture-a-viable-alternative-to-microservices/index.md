@@ -5,6 +5,9 @@ description = "In this article, we explore some of the challenges in adopting th
 date = "2020-09-13"
 toc = true
 categories = [
+  "Software Development",
+]
+tags = [
   "Software Architecture"
 ]
 type = "post"
