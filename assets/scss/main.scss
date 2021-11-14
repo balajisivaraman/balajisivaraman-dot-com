@@ -66,6 +66,23 @@ small, .font_small {
     font-size: 0.75em;
 }
 
+ul {
+    list-style-type: none;
+    padding-left: 1.5em;
+
+    &.listing {
+        li {
+            margin-bottom: 0em;
+        }
+    }
+}
+
+ul li:before {
+    content: '\2014';
+    position: absolute;
+    margin-left: -20px;
+}
+
 /* Links */
 a {
     color: $link;
