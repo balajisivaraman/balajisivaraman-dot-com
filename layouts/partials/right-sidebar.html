@@ -14,25 +14,6 @@
         {{ partial "socialshare.html" . }}
       </div>
       {{ end }}
-      {{ if ne .Type "post" }}
-      <div class="sidebar-item" id="categories">
-        <h4>Categories</h4>
-        <ul>
-          {{ range .Site.Taxonomies.categories.Alphabetical }}
-          <li><a href="{{ .Page.Permalink | relURL }}">{{ .Page.Title }}</a></li>
-          {{ end }}
-        </ul>
-      </div>
-      <div class="sidebar-item" id="tags">
-        <h4>Tags</h4>
-        <ul>
-          {{ range .Site.Taxonomies.tags.Alphabetical }}
-          <li><a href="{{ .Page.Permalink | relURL }}">{{ .Page.Title }}</a></li>
-          {{ end }}
-        </ul>
-      </div>
-      {{ end }}
-      {{ if eq .Type "post" }}
       <div class="sidebar-item" id="categories">
         <h4>Categorised Under</h4>
         <ul>
@@ -52,6 +33,24 @@
       <div class="sidebar-item" id="home">
         <h4></h4>
           Back to <a href="/">home</a>.
+      </div>
+      {{ end }}
+      {{ if ne .Type "post" }}
+      <div class="sidebar-item" id="categories">
+        <h4>Categories</h4>
+        <ul>
+          {{ range .Site.Taxonomies.categories.Alphabetical }}
+          <li><a href="{{ .Page.Permalink | relURL }}"> {{ .Page.Title }} </a></li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="sidebar-item" id="tags">
+        <h4>Tags</h4>
+        <ul>
+          {{ range .Site.Taxonomies.tags.Alphabetical }}
+          <li><a href="{{ .Page.Permalink | relURL }}">{{ .Page.Title }}</a></li>
+          {{ end }}
+        </ul>
       </div>
       {{ end }}
     </div>
