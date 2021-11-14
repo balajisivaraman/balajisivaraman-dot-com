@@ -8,15 +8,14 @@
                     <h2>{{ .Title }} </h2>
                 </div>
                 <article class="post-content">
-                    <br />
                     <div class="archives">
+                      <ul class="listing">
                         {{ range .Pages }}
                         {{ if and (eq .Type "post") (ne .Title "Posts") }} <!-- Hack to filter Posts page -->
-                        <div class="publish-date"> {{ .PublishDate.Format "January 2, 2006" }} </div>
-                        <div class="post-title"> <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a> </div>
-                        <br />
+                        <li> <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a> ({{ .PublishDate.Format "January 2, 2006" }}) </li>
                         {{ end }}
                         {{ end }}
+                      </ul>
                     </div>
                 </article>
             </div>
