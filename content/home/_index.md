@@ -44,5 +44,6 @@ You can find me under the handle `balajisivaraman` on most websites.
 - [LinkedIn](https://www.linkedin.com/in/balajisivaraman/)
 - [GitHub](https://www.github.com/balajisivaraman)
 - [Email](mailto:balaji@balajisivaraman.com)
+- [Letterboxd](https://letterboxd.com/BalajiSivaraman/)
 
 If you wish to contact me securely, [here's my GPG key](gpg-public-key.asc).
