@@ -49,7 +49,7 @@ learning, and this piece of work is no different. It is forcing me to
 think strategically like a CTO faced with a large problem rather than
 as a developer or a technical lead.
 
-# Learning
+## Learning
 
 I ran into a weird issue in my VPS with Nextcloud complaining of a
 downgrade from v22.2.2.0 to v22.2.0.2 and failing to start. After
