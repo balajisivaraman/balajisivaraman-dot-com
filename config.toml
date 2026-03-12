@@ -1,4 +1,4 @@
-baseURL = "https://blog.balajisivaraman.com/"
+baseURL = "https://balajisivaraman.com/"
 languageCode = "en-us"
 title = "Balaji Sivaraman"
 
@@ -11,7 +11,7 @@ preserveTaxonomyNames = true
 disableKinds = ["sitemap"]
 
 [permalinks]
-post = "/:slug"
+post = "/:contentbasename"
 
 [params]
 author = "Balaji Sivaraman"

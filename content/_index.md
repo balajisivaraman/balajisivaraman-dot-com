@@ -23,7 +23,7 @@ modern language design constructs and memory-safe, systems programming
 constructs fascinating. I am a co-organiser of the [Rust Chennai
 Meetup](https://www.meetup.com/mad-rs/).
 
-I have a [blog](https://blog.balajisivaraman.com), where I capture my
+I have a [blog](/), where I capture my
 thoughts on programming, life and everything in-between. I try to keep
 it updated on a weekly basis but don't always succeed.
 
