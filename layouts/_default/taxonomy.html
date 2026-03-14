@@ -1,26 +1,23 @@
-{{ partial "head.html" . }}
-{{ partial "header.html" . }}
-<div class="container">
-    <div id="wrapper" class="row">
-        <div id="left-content" class="col-md-9">
-            <div class="content">
-                <div class="post-header">
-                    <h2>{{ .Title }} </h2>
-                </div>
-                <article class="post-content">
-                    <div class="archives">
-                      <ul class="listing">
-                        {{ range .Pages }}
-                        {{ if and (eq .Type "post") (ne .Title "Posts") }} <!-- Hack to filter Posts page -->
-                        <li> <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a> ({{ .PublishDate.Format "January 2, 2006" }}) </li>
-                        {{ end }}
-                        {{ end }}
-                      </ul>
-                    </div>
-                </article>
-            </div>
-        </div>
-        {{ partial "right-sidebar.html" . }}
-    </div>
+{{ define "main" }}
+<div class="max-w-prose mx-auto px-6 py-8">
+  <h1 class="font-heading text-h2 text-gray-900 dark:text-gray-100 mb-8">
+    {{ .Title }}
+  </h1>
+  <ul class="space-y-1">
+    {{ range .Pages }}
+    {{ if and (eq .Type "post") (ne .Title "Posts") }}
+    <li class="flex justify-between items-baseline py-2 border-b border-gray-100 dark:border-gray-800">
+      <a href="{{ .Permalink }}"
+         class="font-body text-gray-900 dark:text-gray-100
+                hover:text-amber-700 dark:hover:text-amber-400 transition-colors">
+        {{ .Title }}
+      </a>
+      <span class="text-sm text-gray-400 dark:text-gray-500 ml-8 whitespace-nowrap tabular-nums">
+        {{ .PublishDate.Format "January 2, 2006" }}
+      </span>
+    </li>
+    {{ end }}
+    {{ end }}
+  </ul>
 </div>
-{{ partial "footer.html" . }}
+{{ end }}

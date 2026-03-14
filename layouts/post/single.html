@@ -1,27 +1,81 @@
-{{ partial "head.html" . }}
-{{ partial "header.html" . }}
-<div class="container">
-    <div id="wrapper" class="row">
-        <div id="left-content" class="col-md-9">
-            <div class="content">
-              <div class="post-header">
-                    <h1>{{ .Title }}</h1>
-                    <div class="post-meta">
-                        <span class="publish-date"> {{ .PublishDate.Format "January 2, 2006" }} </span>
-                        <span class="word-count">
-                            {{ .WordCount }} words
-                        </span>
-                        <span class="reading-time">
-                            {{ .ReadingTime }} min read
-                        </span>
-                    </div>
-                </div>
-                <article class="post-content">
-                    {{ .Content }}
-                </article>
-            </div>
+{{ define "main" }}
+{{ if .Params.toc }}
+<div class="lg:grid lg:grid-cols-[14rem_1fr_18rem] lg:gap-8 max-w-[80rem] mx-auto px-6 py-8">
+{{ else }}
+<div class="lg:grid lg:grid-cols-[14rem_1fr] lg:gap-8 max-w-[60rem] mx-auto px-6 py-8">
+{{ end }}
+
+  <!-- Left sidebar: article meta -->
+  <aside class="hidden lg:block">
+    <div class="sticky top-8 text-sm font-body text-gray-500 dark:text-gray-400 space-y-4">
+      <div>
+        <div class="font-heading text-xs uppercase tracking-wide text-gray-400 dark:text-gray-600 mb-1">Article</div>
+        <p class="text-gray-700 dark:text-gray-300 font-medium leading-snug">{{ .Title }}</p>
+      </div>
+      <div class="grid grid-cols-2 gap-3 border-t border-gray-100 dark:border-gray-800 pt-4">
+        <div>
+          <div class="font-heading text-xs uppercase tracking-wide text-gray-400 dark:text-gray-600 mb-0.5">Published</div>
+          <div class="text-gray-700 dark:text-gray-300">{{ .PublishDate.Format "Jan 2, 2006" }}</div>
         </div>
-        {{ partial "right-sidebar.html" . }}
+        <div>
+          <div class="font-heading text-xs uppercase tracking-wide text-gray-400 dark:text-gray-600 mb-0.5">Reading</div>
+          <div class="text-gray-700 dark:text-gray-300">{{ .ReadingTime }} min</div>
+        </div>
+      </div>
     </div>
+  </aside>
+
+  <!-- Center: article content -->
+  <article class="min-w-0">
+    <!-- mobile meta (shown below lg) -->
+    <div class="lg:hidden mb-8 text-sm text-gray-400 dark:text-gray-500 font-body space-x-3">
+      <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
+      <span>·</span>
+      <span>{{ .WordCount }} words</span>
+      <span>·</span>
+      <span>{{ .ReadingTime }} min read</span>
+    </div>
+
+    {{ if .Params.toc }}
+    <details class="lg:hidden mb-6 border border-gray-200 dark:border-gray-700 rounded-lg open:pb-2">
+      <summary class="px-4 py-3 font-heading text-xs uppercase tracking-wide text-gray-500
+                      dark:text-gray-400 cursor-pointer select-none list-none">
+        Contents
+      </summary>
+      <div class="px-4 pb-2 toc text-sm text-gray-600 dark:text-gray-400
+                  space-y-1 [&_ol]:space-y-1 [&_ol]:mt-1 [&_ol]:ml-3
+                  [&_a]:block [&_a]:py-0.5
+                  [&_a]:hover:text-amber-700 dark:[&_a]:hover:text-amber-400
+                  [&_a]:transition-colors">
+        {{ .TableOfContents }}
+      </div>
+    </details>
+    {{ end }}
+
+    <h1 class="font-heading text-h1 text-gray-900 dark:text-gray-100 mb-4">
+      {{ .Title }}
+    </h1>
+
+    <div class="prose prose-lg dark:prose-invert max-w-none mt-8">
+      {{ .Content }}
+    </div>
+  </article>
+
+  <!-- Right sidebar: ToC -->
+  {{ if .Params.toc }}
+  <aside class="hidden lg:block">
+    <nav class="sticky top-8 text-sm font-body">
+      <div class="font-heading text-xs uppercase tracking-wide text-gray-400 dark:text-gray-600 mb-3">
+        Contents
+      </div>
+      <div class="toc text-gray-600 dark:text-gray-400 space-y-1 [&_ol]:space-y-1 [&_ol]:mt-1 [&_ol]:ml-3 [&_a]:block [&_a]:py-0.5 [&_a]:hover:text-amber-700 dark:[&_a]:hover:text-amber-400 [&_a]:transition-colors">
+        {{ .TableOfContents }}
+      </div>
+    </nav>
+  </aside>
+  {{ else }}
+  <aside class="hidden lg:block"></aside>
+  {{ end }}
+
 </div>
-{{ partial "footer.html" . }}
+{{ end }}

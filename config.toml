@@ -1,6 +1,6 @@
 baseURL = "https://balajisivaraman.com/"
 languageCode = "en-us"
-title = "Balaji Sivaraman"
+title = "Bytes and Words"
 
 # Enable Chroma Syntax Highlighting
 pygmentsOptions = "linenos=true"
@@ -21,5 +21,5 @@ description = "Balaji Sivaraman is a Lead Technologist who writes about software
 [markup]
   [markup.tableOfContents]
     startLevel = 2
-    endLevel = 2
+    endLevel = 3
     ordered = true

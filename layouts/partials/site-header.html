@@ -1,0 +1,17 @@
+<header class="max-w-[80rem] mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="font-heading text-2xl text-gray-900 dark:text-gray-100
+                      hover:text-amber-700 dark:hover:text-amber-400 transition-colors">
+    {{ .Site.Title }}
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
+    <a href="/index.xml" class="hover:text-amber-700 dark:hover:text-amber-400 transition-colors">RSS</a>
+    <a href="/about/" class="hover:text-amber-700 dark:hover:text-amber-400 transition-colors">About</a>
+    <div id="theme-toggle" role="group" aria-label="Color theme"
+         class="flex items-center gap-1 text-xs border border-gray-200 dark:border-gray-700
+                rounded-full px-1 py-0.5 select-none">
+      <button data-theme="light" aria-label="Light" class="theme-btn px-1.5 py-0.5 rounded-full transition-colors cursor-pointer">☀︎</button>
+      <button data-theme="auto"  aria-label="Auto"  class="theme-btn px-1.5 py-0.5 rounded-full text-[10px] font-heading tracking-wide transition-colors cursor-pointer">AUTO</button>
+      <button data-theme="dark"  aria-label="Dark"  class="theme-btn px-1.5 py-0.5 rounded-full transition-colors cursor-pointer">☽</button>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,14 @@
+{
+  "name": "bytes-and-words",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/compiled.css --minify",
+    "watch:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/compiled.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3",
+    "postcss": "^8",
+    "autoprefixer": "^10",
+    "@tailwindcss/typography": "^0.5"
+  }
+}

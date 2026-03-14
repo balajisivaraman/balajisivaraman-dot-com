@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{ if eq .Type "post" }}
+    <title>{{ .Title }} — {{ .Site.Title }}</title>
+    <meta name="title" content="{{ .Title }} — {{ .Site.Title }}">
+    <meta name="description" content="{{ .Description }}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ .Title }} — {{ .Site.Title }}">
+    <meta property="og:description" content="{{ .Description }}">
+    {{ else }}
+    <title>{{ .Site.Title }}</title>
+    <meta name="title" content="{{ .Site.Title }}">
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:description" content="{{ .Site.Params.description }}">
+    {{ end }}
+    <meta property="og:url" content="{{ .Permalink }}">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Dark mode: run before any CSS to prevent flash -->
+    <script>
+      (function() {
+        const t = localStorage.getItem('theme')
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (t === 'dark' || (t !== 'light' && prefersDark)) {
+          document.documentElement.classList.add('dark')
+        }
+      })()
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Dark mode toggle active state -->
+    <style>
+      .theme-btn[data-active] { background-color: rgb(229 231 235); }
+      .dark .theme-btn[data-active] { background-color: rgb(55 65 81); }
+    </style>
+
+    <!-- Tailwind CSS -->
+    {{ $css := resources.Get "css/compiled.css" }}
+    {{ if $css }}
+    {{ $css = resources.Fingerprint $css }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+    {{ end }}
+  </head>
+  <body class="bg-[#faf7f2] dark:bg-[#0f1117] text-gray-900 dark:text-gray-100 min-h-screen">
+
+    {{ partial "site-header.html" . }}
+
+    {{ block "main" . }}{{ end }}
+
+    {{ partial "site-footer.html" . }}
+
+    <!-- Dark mode toggle -->
+    <script>
+      (function() {
+        function applyTheme(t) {
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+          if (t === 'dark' || (t === 'auto' && prefersDark)) {
+            document.documentElement.classList.add('dark')
+          } else {
+            document.documentElement.classList.remove('dark')
+          }
+          localStorage.setItem('theme', t)
+          document.querySelectorAll('.theme-btn').forEach(function(btn) {
+            if (btn.dataset.theme === t) {
+              btn.setAttribute('data-active', '')
+            } else {
+              btn.removeAttribute('data-active')
+            }
+          })
+        }
+        const saved = localStorage.getItem('theme') || 'auto'
+        applyTheme(saved)
+        document.querySelectorAll('.theme-btn').forEach(function(btn) {
+          btn.addEventListener('click', function() { applyTheme(btn.dataset.theme) })
+        })
+      })()
+    </script>
+
+  </body>
+</html>

@@ -1,13 +1,25 @@
-{{ partial "head.html" . }}
-<div class="container">
-    <div id="wrapper" class="row">
-        <div id="left-content" class="col-md-12">
-            <div class="content">
-                <h2>{{ .Title }} </h2>
-                <article class="post-content">
-                    {{ .Content }}
-                </article>
-            </div>
-        </div>
-    </div>
+{{ define "main" }}
+<div class="max-w-prose mx-auto px-6">
+  <div class="py-6 font-body text-reading text-gray-700 dark:text-gray-300 leading-relaxed">
+    {{ .Content }}
+  </div>
+
+  <main class="mt-8">
+    {{ range (where .Site.RegularPages "Type" "post") }}
+    <a href="{{ .Permalink }}"
+       class="flex justify-between items-baseline py-3 border-b
+              border-gray-100 dark:border-gray-800 group">
+      <span class="font-body text-gray-900 dark:text-gray-100
+                   group-hover:text-amber-700 dark:group-hover:text-amber-400
+                   transition-colors">
+        {{ .Title }}
+      </span>
+      <span class="text-sm text-gray-400 dark:text-gray-500 ml-8
+                   whitespace-nowrap tabular-nums">
+        {{ .Date.Format "January 2, 2006" }}
+      </span>
+    </a>
+    {{ end }}
+  </main>
 </div>
+{{ end }}
